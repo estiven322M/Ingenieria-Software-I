@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmi:id="_MRFmMJd_EfCDZLM4d-es_g" type="PapyrusUMLSequenceDiagram" name="Sequence Diagram" measurementUnit="Pixel">
+  <children xsi:type="notation:Shape" xmi:id="_MRFmMZd_EfCDZLM4d-es_g" type="Interaction_Shape">
+    <children xsi:type="notation:DecorationNode" xmi:id="_MRFmMpd_EfCDZLM4d-es_g" type="Interaction_NameLabel"/>
+    <children xsi:type="notation:BasicCompartment" xmi:id="_MRFmM5d_EfCDZLM4d-es_g" type="Interaction_SubfragmentCompartment">
+      <layoutConstraint xsi:type="notation:Bounds" xmi:id="_MRFmNJd_EfCDZLM4d-es_g"/>
+    </children>
+    <element href="Secuencia:%20Registro%20de%20envio%20exitoso.uml#_MQ1HgJd_EfCDZLM4d-es_g"/>
+    <layoutConstraint xsi:type="notation:Bounds" xmi:id="_MRFmNZd_EfCDZLM4d-es_g"/>
+  </children>
+  <styles xsi:type="notation:StringValueStyle" xmi:id="_MRFmNpd_EfCDZLM4d-es_g" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xsi:type="notation:DiagramStyle" xmi:id="_MRFmN5d_EfCDZLM4d-es_g"/>
+  <styles xsi:type="style:PapyrusDiagramStyle" xmi:id="_MRFmOJd_EfCDZLM4d-es_g" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+    <owner href="Secuencia:%20Registro%20de%20envio%20exitoso.uml#_MQnFEJd_EfCDZLM4d-es_g"/>
+  </styles>
+  <element href="Secuencia:%20Registro%20de%20envio%20exitoso.uml#_MQ1HgJd_EfCDZLM4d-es_g"/>
+</notation:Diagram>
