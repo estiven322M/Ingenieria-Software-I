@@ -13,39 +13,79 @@ public class LoginView extends JFrame {
 
     public LoginView() {
         controller = new ModelController();
-        setTitle("QMD - Acceso Ciudadano");
-        setSize(350, 250);
+        setTitle("QMD - Acceso al Sistema");
+        setSize(400, 350);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
-        setLayout(new GridLayout(4, 1, 10, 10));
+        setLayout(new GridBagLayout());
+        getContentPane().setBackground(Color.WHITE);
 
-        JPanel pnlCed = new JPanel(); pnlCed.add(new JLabel("Cédula:")); 
-        txtCedula = new JTextField(15); pnlCed.add(txtCedula);
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+
+        // Título
+        JLabel lblTitulo = new JLabel("Bienvenido a QMD");
+        lblTitulo.setFont(new Font("SansSerif", Font.BOLD, 20));
+        lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
+        gbc.gridx = 0; gbc.gridy = 0; gbc.gridwidth = 2;
+        add(lblTitulo, gbc);
+
+        // Inputs
+        gbc.gridwidth = 1; gbc.gridy = 1;
+        add(new JLabel("Cédula:"), gbc);
         
-        JPanel pnlPass = new JPanel(); pnlPass.add(new JLabel("Clave:")); 
-        txtPass = new JPasswordField(15); pnlPass.add(txtPass);
+        gbc.gridx = 1;
+        txtCedula = new JTextField(15);
+        add(txtCedula, gbc);
 
+        gbc.gridx = 0; gbc.gridy = 2;
+        add(new JLabel("Contraseña:"), gbc);
+        
+        gbc.gridx = 1;
+        txtPass = new JPasswordField(15);
+        add(txtPass, gbc);
+
+        // Botones
+        gbc.gridx = 0; gbc.gridy = 3; gbc.gridwidth = 2;
         JButton btnLogin = new JButton("Ingresar");
-        JButton btnReg = new JButton("Registrarse");
+        btnLogin.setBackground(new Color(63, 81, 181));
+        btnLogin.setForeground(Color.WHITE);
+        btnLogin.setPreferredSize(new Dimension(100, 40));
+        btnLogin.setFocusPainted(false);
+        add(btnLogin, gbc);
 
-        add(new JLabel("Bienvenido a QMD", SwingConstants.CENTER));
-        add(pnlCed);
-        add(pnlPass);
-        
-        JPanel pnlBtn = new JPanel();
-        pnlBtn.add(btnLogin); pnlBtn.add(btnReg);
-        add(pnlBtn);
+        gbc.gridy = 4;
+        JButton btnReg = new JButton("Registrar nuevo ciudadano");
+        btnReg.setBorderPainted(false);
+        btnReg.setContentAreaFilled(false);
+        btnReg.setForeground(Color.BLUE);
+        btnReg.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        add(btnReg, gbc);
 
         // Eventos
         btnLogin.addActionListener(e -> {
-            String ced = txtCedula.getText();
+            String ced = txtCedula.getText().trim();
             String pass = new String(txtPass.getPassword());
+            
+            // Lógica de Roles
+            
+            // 1. ADMINISTRADOR (Backdoor o credenciales fijas)
+            if(ced.equals("admin") && pass.equals("admin123")) {
+                // Abre la nueva vista de gestión para el Administrador
+                new GestionProductosView(controller).setVisible(true);
+                dispose(); // Cierra la ventana de login
+                return;
+            }
+
+            // 2. CIUDADANO 
             Ciudadano c = controller.login(ced, pass);
             if (c != null) {
-                new ReservaView(c, controller).setVisible(true);
-                dispose();
+                // Abre la vista de catálogo para ciudadanos
+                new CatalogoView(c, controller).setVisible(true);
+                dispose(); // Cierra la ventana de login
             } else {
-                JOptionPane.showMessageDialog(this, "Credenciales incorrectas");
+                JOptionPane.showMessageDialog(this, "Credenciales incorrectas", "Error de Acceso", JOptionPane.ERROR_MESSAGE);
             }
         });
 
@@ -55,6 +95,8 @@ public class LoginView extends JFrame {
     }
 
     public static void main(String[] args) {
+        // Look and Feel del sistema para que los bordes se vean mejor
+        try { UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName()); } catch (Exception e) {}
         SwingUtilities.invokeLater(() -> new LoginView().setVisible(true));
     }
 }

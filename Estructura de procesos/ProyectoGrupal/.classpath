@@ -6,5 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/home/user/Escritorio/Ingenieria de sistemas 2025-2/Ingeniería de Software I/Estructura de procesos/ProyectoGrupal/lib/h2-2.4.240.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
