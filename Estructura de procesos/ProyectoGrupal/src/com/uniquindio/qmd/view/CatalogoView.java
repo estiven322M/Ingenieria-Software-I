@@ -55,6 +55,21 @@ public class CatalogoView extends JFrame {
         pnlTitulos.add(lblSub);
         pnlHeader.add(pnlTitulos, BorderLayout.CENTER);
         
+     // Cerrar sesion
+        JButton btnVolver = new JButton("Cerrar Sesión");
+        btnVolver.setBackground(new Color(255, 87, 34)); 
+        btnVolver.setForeground(Color.WHITE);
+        btnVolver.setFont(new Font("SansSerif", Font.BOLD, 12));
+        btnVolver.setFocusPainted(false);
+        btnVolver.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
+        
+        btnVolver.addActionListener(e -> {
+            new LoginView().setVisible(true);
+            dispose(); 
+        });
+        pnlHeader.add(btnVolver, BorderLayout.EAST);
+        
         add(pnlHeader, BorderLayout.NORTH);
 
         // --- CONTENIDO ---

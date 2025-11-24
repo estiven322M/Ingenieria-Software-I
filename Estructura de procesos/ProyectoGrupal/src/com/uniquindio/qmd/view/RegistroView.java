@@ -129,9 +129,17 @@ public class RegistroView extends JFrame {
         JButton btnLimpiar = new JButton("Limpiar");
         estilizarBoton(btnLimpiar, Color.WHITE, Color.BLACK);
         btnLimpiar.setBorder(BorderFactory.createLineBorder(Color.LIGHT_GRAY));
+        
+     
+        JButton btnVolver = new JButton("Volver");
+        estilizarBoton(btnVolver, new Color(220, 53, 69), Color.WHITE); // Rojo suave
+        
+        // Acción: Solo cerrar esta ventana (el Login sigue abierto debajo)
+        btnVolver.addActionListener(e -> dispose());
 
         pnlBtns.add(btnGuardar);
         pnlBtns.add(btnLimpiar);
+        pnlBtns.add(btnVolver);
         add(pnlBtns, BorderLayout.SOUTH);
 
         // --- LÓGICA DE EVENTOS ---
