@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Diálogo (F-U9-03)</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="form-container form-dialog">
+        <div class="form-header">
+            <h2>Formulario Diálogo: Notificación de Salida</h2>
+            <p>Formulario (F-U9-03) - Usado en Actividad 8: Notificar salida al cliente</p>
+        </div>
+        <div class="form-body">
+            
+            <div class="form-section">
+                <h3>Pre-visualización de la Notificación</h3>
+                <div class="form-group">
+                    <label for="destinatario">Destinatario (Email/Teléfono):</label>
+                    <input type="text" id="destinatario" name="destinatario" value="cliente.remitente@email.com" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Cuerpo del Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" readonly>¡Tu envío (Eco-Track #BTO-774) ha sido despachado! Ya se encuentra en tránsito hacia su destino.</textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Envío y Confirmación</h3>
+                <div class="form-group">
+                    <label>Estado del Envío:</label>
+                    <div class="dialog-status">
+                        Pendiente de Envío
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary" style="width: 100%;">ENVIAR NOTIFICACIÓN</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

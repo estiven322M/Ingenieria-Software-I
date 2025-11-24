@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Soporte (F-U5-01)</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Formulario Soporte: Hoja de Control Inicial</h2>
+            <p>Formulario (F-U5-01) - Usado en Actividad 5: Aceptar verificación de carga</p>
+        </div>
+        <div class="form-body">
+            
+            <div class="form-section">
+                <h3>Sección Identificación</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="bulto-codigo">Código de Bulto:</label>
+                            <input type="text" id="bulto-codigo" name="bulto-codigo">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="inspector-nombre">Inspector de Trazabilidad:</label>
+                            <input type="text" id="inspector-nombre" name="inspector-nombre">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Sección Verificación Física</h3>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="peso-declarado">Peso Declarado (kg):</label>
+                            <input type="text" id="peso-declarado" name="peso-declarado">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="peso-verificado">Peso Verificado (kg):</label>
+                            <input type="text" id="peso-verificado" name="peso-verificado">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="dim-declaradas">Dimensiones Declaradas (cm):</label>
+                            <input type="text" id="dim-declaradas" name="dim-declaradas">
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="dim-verificadas">Dimensiones Verificadas (cm):</label>
+                            <input type="text" id="dim-verificadas" name="dim-verificadas">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="observaciones">Observaciones de la Inspección:</label>
+                    <textarea id="observaciones" name="observaciones"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Sección Resultado y Aceptación</h3>
+                <div class="form-group">
+                    <label>Resultado:</label>
+                    <div class="check-group">
+                        <input type="radio" id="res-conforme" name="resultado">
+                        <label for="res-conforme">Conforme</label>
+                        <input type="radio" id="res-no-conforme" name="resultado">
+                        <label for="res-no-conforme">No Conforme</label>
+                    </div>
+                </div>
+                <div class="check-group">
+                    <input type="checkbox" id="acepta-cliente" name="acepta-cliente">
+                    <label for="acepta-cliente">El cliente acepta los resultados de la inspección.</label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
