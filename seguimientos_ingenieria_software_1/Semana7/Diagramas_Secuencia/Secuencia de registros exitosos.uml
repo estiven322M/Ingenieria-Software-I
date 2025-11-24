@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_bqJ6kJeCEfCDZLM4d-es_g" name="Secuencia de registros exitosos">
-  <packageImport xmi:type="uml:PackageImport" xmi:id="_bquiUJeCEfCDZLM4d-es_g">
-    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
-  </packageImport>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_bqVgwJeCEfCDZLM4d-es_g" name="Interaction1"/>
-</uml:Model>

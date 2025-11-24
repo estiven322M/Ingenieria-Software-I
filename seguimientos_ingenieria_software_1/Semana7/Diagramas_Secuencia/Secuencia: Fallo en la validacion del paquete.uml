@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_nbm2wJd_EfCDZLM4d-es_g" name="Secuencia: Fallo en la validacion del paquete">
-  <packageImport xmi:type="uml:PackageImport" xmi:id="_ncY54Jd_EfCDZLM4d-es_g">
-    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
-  </packageImport>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_nb0SIJd_EfCDZLM4d-es_g" name="Interaction1"/>
-</uml:Model>
